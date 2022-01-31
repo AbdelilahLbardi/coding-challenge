@@ -30,4 +30,8 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    // Breaking Bad API
+    'breaking_bad_api' => [
+        'url' => env('BREAKING_BAD_API')
+    ]
 ];
