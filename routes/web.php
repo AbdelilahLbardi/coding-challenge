@@ -13,6 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::match(['POST', 'PUT'], '/characters/{id}', \App\Http\Controllers\Characters\UpdateCharacterController::class)->name('characters.update');
