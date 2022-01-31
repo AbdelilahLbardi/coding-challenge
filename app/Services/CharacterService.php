@@ -13,7 +13,8 @@ class CharacterService extends BreakingBadService
 
     public function fetch()
     {
-        Http::get(config('services.breaking_bad_api.url') . CharacterService::RESOURCE)
+        $this->service
+            ->get(self::RESOURCE)
             ->collect()
             ->map(fn ($item) => Character::query()->create(
                 $this->mapResponse($item)
